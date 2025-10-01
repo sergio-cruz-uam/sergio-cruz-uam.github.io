@@ -11,7 +11,30 @@
     html, body { margin:0; padding:0; background:var(--bg); color:var(--ink);
       font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; }
     .wrap { max-width: 880px; margin: 40px auto; padding: 0 18px 48px; }
-    header { display: grid; grid-template-columns: 140px 1fr; gap: 22px; align-items: center; margin-bottom: 26px; }
+    header {
+  display: grid;
+  grid-template-columns: 260px 1fr; /* reserva más ancho para la columna de la foto */
+  gap: 36px;                        /* más separación entre foto y texto */
+  align-items: center;
+  margin-bottom: 26px;
+}
+header img {
+  width: 220px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 6px 24px rgba(0,0,0,.35);
+  background:#222;
+}
+
+/* añade un pequeño empujón extra solo en pantallas anchas */
+.titleblock { padding-left: 6px; }
+
+/* en móvil mantenemos todo compacto */
+@media (max-width: 720px) {
+  header { grid-template-columns: 1fr; gap: 14px; }
+  .titleblock { padding-left: 0; }
+}
+
     header img { 
   width: 220px;      /* más ancho */
   height: auto;      /* altura automática */
