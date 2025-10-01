@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sergio Cruz Blázquez</title>
+  <style>
+    :root {
+      --bg: #0f1115; --card: #151823; --ink: #e8ecf1; --muted: #a8b0bd; --link: #9bd1ff;
+    }
+    html, body { margin:0; padding:0; background:var(--bg); color:var(--ink);
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; }
+    .wrap { max-width: 880px; margin: 40px auto; padding: 0 18px 48px; }
+    header { display: grid; grid-template-columns: 140px 1fr; gap: 22px; align-items: center; margin-bottom: 26px; }
+    header img { width: 140px; height: 140px; object-fit: cover; border-radius: 18px; box-shadow: 0 6px 24px rgba(0,0,0,.35); background:#222; }
+    h1 { font-size: 2rem; margin: 0 0 4px 0; line-height: 1.2; }
+    .sub { color: var(--muted); margin: 2px 0; }
+    .card { background: var(--card); border: 1px solid rgba(255,255,255,.06); border-radius: 16px; padding: 18px; margin: 18px 0 26px; }
+    h2 { font-size: 1.25rem; margin: 0 0 10px 0; }
+    a { color: var(--link); text-decoration: none; } a:hover { text-decoration: underline; }
+    ul { margin: 10px 0 0 20px; }
+    .muted { color: var(--muted); }
+    .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    @media (max-width: 720px) { header { grid-template-columns: 1fr; } header img { width: 120px; height: 120px; } .grid2 { grid-template-columns: 1fr; } }
+    .tag { display:inline-block; font-size:.8rem; padding:3px 8px; border:1px solid rgba(255,255,255,.15); border-radius:999px; color:var(--muted); margin-left:8px; }
+    .small { font-size: .95rem; }
+    .hr { height:1px; background: rgba(255,255,255,.08); margin: 22px 0; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <img src="assets/img/sergio.jpg" alt="Foto de Sergio Cruz Blázquez">
+      <div>
+        <h1>Sergio Cruz Blázquez</h1>
+        <div class="sub">Profesor Ayudante Doctor</div>
+        <div class="sub">Departamento de Matemáticas — Universidad Autónoma de Madrid</div>
+      </div>
+    </header>
+
+    <div class="grid2">
+      <section class="card">
+        <h2>Información de contacto</h2>
+        <div class="small">
+          Universidad Autónoma de Madrid<br>
+          Departamento de Matemáticas, Despacho 17-309<br>
+          Calle de Darwin, 2, 28049 Madrid (Spain)<br>
+          <span class="muted">sergio.cruz [at] uam.es</span>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>Docencia</h2>
+        <ul class="small">
+          <li>
+            Cálculo II en Ingeniería Informática
+            <span class="tag">2024/2025</span>
+            <div class="muted">
+              <a href="assets/apuntes/calculo2_24-25_tema1.pdf">Tema 1</a> ·
+              <a href="assets/apuntes/calculo2_24-25_tema2.pdf">Tema 2</a> ·
+              <a href="assets/apuntes/calculo2_24-25_resumen.pdf">Resumen</a>
+            </div>
+          </li>
+          <li>
+            Cálculo I en Ingeniería Informática
+            <span class="tag">2025/2026</span>
+            <div class="muted">
+              <a href="assets/apuntes/calculo1_inf_25-26_tema1.pdf">Tema 1</a> ·
+              <a href="assets/apuntes/calculo1_inf_25-26_tema2.pdf">Tema 2</a> ·
+              <a href="assets/apuntes/calculo1_inf_25-26_problemas.pdf">Problemas</a>
+            </div>
+          </li>
+          <li>
+            Cálculo I en Matemáticas
+            <span class="tag">2025/2026</span>
+            <div class="muted">
+              <a href="assets/apuntes/calculo1_mat_25-26_tema1.pdf">Tema 1</a> ·
+              <a href="assets/apuntes/calculo1_mat_25-26_tema2.pdf">Tema 2</a> ·
+              <a href="assets/apuntes/calculo1_mat_25-26_extra.pdf">Material extra</a>
+            </div>
+          </li>
+        </ul>
+        <div class="muted small" style="margin-top:8px;">(Sube los PDFs a <code>assets/apuntes/</code> y cambia los nombres si no coinciden.)</div>
+      </section>
+    </div>
+
+    <section class="card">
+      <h2>Publicaciones</h2>
+      <ul class="small">
+        <!-- Duplica y edita estas líneas -->
+        <li>Título del artículo 1 — <a href="https://arxiv.org/abs/XXXX.XXXXX" target="_blank" rel="noopener">arXiv:XXXX.XXXXX</a></li>
+        <li>Título del artículo 2 — <a href="https://arxiv.org/abs/YYYY.YYYYY" target="_blank" rel="noopener">arXiv:YYYY.YYYYY</a></li>
+      </ul>
+      <div class="muted small" style="margin-top:8px;">(Añade cada nueva entrada con su enlace a arXiv.)</div>
+    </section>
+
+    <div class="hr"></div>
+    <footer class="muted small">
+      © <span id="y"></span> Sergio Cruz Blázquez · GitHub Pages
+    </footer>
+  </div>
+
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</body>
+</html>
