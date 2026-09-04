@@ -2,6 +2,8 @@
 
 La web está hecha únicamente con HTML y CSS. No hay que instalar programas ni ejecutar un proceso de construcción: los cambios publicados en la rama principal de GitHub se reflejan directamente en GitHub Pages.
 
+Dirección pública: <https://sergio-cruz-uam.github.io/>
+
 ## Dónde se edita cada cosa
 
 - `index.html`: portada, fotografía y datos de contacto.
