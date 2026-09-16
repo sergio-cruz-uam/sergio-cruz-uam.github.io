@@ -504,6 +504,76 @@ h1 {
   list-style: none;
 }
 
+.resource-group summary {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.25rem;
+  align-items: center;
+  padding: 1rem 1.2rem;
+  cursor: pointer;
+  list-style: none;
+  transition: background 150ms ease;
+}
+
+.resource-group summary::-webkit-details-marker {
+  display: none;
+}
+
+.resource-group summary:hover,
+.resource-group summary:focus-visible {
+  background: rgba(30, 94, 170, 0.07);
+}
+
+.resource-group summary strong,
+.resource-group summary small,
+.resource-pending strong,
+.resource-pending small {
+  display: block;
+}
+
+.resource-group summary strong,
+.resource-pending strong {
+  font-size: 0.92rem;
+  line-height: 1.35;
+}
+
+.resource-group summary small,
+.resource-pending small {
+  margin-top: 0.15rem;
+  color: var(--ink-soft);
+  font-size: 0.76rem;
+  line-height: 1.4;
+}
+
+.resource-group-action {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: 0.45rem;
+  color: var(--accent);
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.resource-group-action::after {
+  content: "+";
+  width: 1rem;
+  font-size: 1rem;
+  line-height: 1;
+  text-align: center;
+}
+
+.resource-group[open] .resource-group-action::after {
+  content: "−";
+}
+
+.resource-list-nested {
+  border-top: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.32);
+}
+
 .resource-list li + li {
   border-top: 1px solid var(--line);
 }
@@ -527,6 +597,11 @@ h1 {
 .resource-list strong,
 .resource-list small {
   display: block;
+}
+
+.resource-pending {
+  padding: 1rem 1.2rem;
+  color: var(--ink-soft);
 }
 
 .resource-list strong {
